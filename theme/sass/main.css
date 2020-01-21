@@ -401,7 +401,7 @@ html.fullscreen-bg #wrapper {
 }
 .user-account .user-photo {
   margin: 0 auto;
-  border: 2px solid #e8e8e8;
+  border: 5px solid #0c0b0c;
 }
 .user-account .user-name {
   display: block;
@@ -1569,55 +1569,6 @@ textarea.parsley-error {
 .pager .disabled > a:focus,
 .pager .disabled > span {
   border-color: #ddd;
-}
-
-.card {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 3px;
-  border-top: 3px solid #5A5A5A;
-}
-.card.card-primary {
-  border-top: 3px solid #5c8ed4;
-}
-.card.card-success {
-  border-top: 3px solid #22af46;
-}
-.card.card-info {
-  border-top: 3px solid #3C89DA;
-}
-.card.card-warning {
-  border-top: 3px solid #f3ad06;
-}
-.card.card-danger {
-  border-top: 3px solid #de4848;
-}
-
-.card-body {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  padding: 1.25rem;
-}
-
-.card-title {
-  display: inline-block;
-  font-size: 18px;
-  margin: 0;
-  line-height: 1;
-  border-bottom: 1px solid #f4f4f4;
-  padding: 0px 0px 0px 15px;
 }
 
 /* Charts */

@@ -278,13 +278,13 @@
 
 	.user-photo {
 		margin: 0 auto;
-		border: 5px solid darken($sidebar-color, 10%);
+		border: 2px solid #e8e8e8;
 	}
 
 	.user-name {
 		display: block;
 		margin-top: 12px;
-		color: inherit;
+		color: #e8e8e8;
 
 		&:hover,
 		&:focus {
@@ -318,7 +318,7 @@
 
 			&.active > a {
 				border-left-color: $color-accent;
-				background-color: #f1f1f1;
+				background-color: #007849;
 			}
 
 			.active a {
@@ -354,7 +354,7 @@
 			display: block;
 			padding: 13px 15px;
 			outline-width: 0;
-			color: $font-color;
+			color: #e8e8e8;
 		}
 
 		ul a {
@@ -377,7 +377,7 @@
 			&:focus,
 			&:active {
 				text-decoration: none;
-				background: #f1f1f1;
+				background: #007849;
 			}
 		}
 
