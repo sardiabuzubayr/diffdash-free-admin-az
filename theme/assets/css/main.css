@@ -1014,28 +1014,28 @@ textarea.parsley-error {
   padding: 3px 8px;
 }
 
-.btn-primary {
+.btn-primary, .btn--confirm {
   background-color: #5c8ed4;
   border-color: #5086d1;
 }
-.btn-primary:hover, .btn-primary:focus {
+.btn-primary:hover, .btn--confirm:hover, .btn-primary:focus, .btn--confirm:focus {
   background-color: #5086d1;
   border-color: #5086d1;
 }
-.btn-primary.active, .btn-primary.active:focus, .btn-primary.active.focus, .btn-primary:active, .btn-primary:active:focus, .btn-primary:active.focus {
+.btn-primary.active, .active.btn--confirm, .btn-primary.active:focus, .btn-primary.active.focus, .btn-primary:active, .btn--confirm:active, .btn-primary:active:focus, .btn-primary:active.focus {
   background-color: #4c83d0;
   border-color: #4c83d0;
 }
 
-.btn-default {
+.btn-default, .btn--cancel {
   color: #5A5A5A;
 }
-.btn-default:hover, .btn-default:focus {
+.btn-default:hover, .btn--cancel:hover, .btn-default:focus, .btn--cancel:focus {
   background-color: #f9f9f9;
   border-color: #dcdcdc;
   color: #5A5A5A;
 }
-.btn-default.active, .btn-default.active:focus, .btn-default.active.focus, .btn-default:active, .btn-default:active:focus, .btn-default:active.focus {
+.btn-default.active, .active.btn--cancel, .btn-default.active:focus, .btn-default.active.focus, .btn-default:active, .btn--cancel:active, .btn-default:active:focus, .btn-default:active.focus {
   background-color: #f4f4f4;
   border-color: #d2d2d2;
   color: #5A5A5A;
@@ -1115,11 +1115,11 @@ textarea.parsley-error {
   box-shadow: none;
 }
 
-.open > .dropdown-toggle.btn-primary {
+.open > .dropdown-toggle.btn-primary, .open > .dropdown-toggle.btn--confirm {
   background-color: #5c8ed4;
   border-color: #5086d1;
 }
-.open > .dropdown-toggle.btn-primary:focus, .open > .dropdown-toggle.btn-primary:hover {
+.open > .dropdown-toggle.btn-primary:focus, .open > .dropdown-toggle.btn--confirm:focus, .open > .dropdown-toggle.btn-primary:hover, .open > .dropdown-toggle.btn--confirm:hover {
   background-color: #5086d1;
   border-color: #5086d1;
 }
@@ -1147,12 +1147,12 @@ textarea.parsley-error {
   background-color: #dc3b3b;
   border-color: #dc3b3b;
 }
-.open > .dropdown-toggle.btn-default {
+.open > .dropdown-toggle.btn-default, .open > .dropdown-toggle.btn--cancel {
   background-color: #acb5c1;
   border-color: #a3adba;
   color: #fff;
 }
-.open > .dropdown-toggle.btn-default:focus, .open > .dropdown-toggle.btn-default:hover {
+.open > .dropdown-toggle.btn-default:focus, .open > .dropdown-toggle.btn--cancel:focus, .open > .dropdown-toggle.btn-default:hover, .open > .dropdown-toggle.btn--cancel:hover {
   background-color: #f9f9f9;
   border-color: #dcdcdc;
   color: #5A5A5A;
@@ -1587,6 +1587,7 @@ textarea.parsley-error {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 3px;
   border-top: 3px solid #5A5A5A;
+  margin-bottom: 10px;
 }
 .card.card-primary {
   border-top: 3px solid #5c8ed4;
@@ -1618,6 +1619,24 @@ textarea.parsley-error {
   line-height: 1;
   border-bottom: 1px solid #f4f4f4;
   padding: 0px 0px 0px 15px;
+}
+
+.card-footer {
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.btn--confirm {
+  color: #fff;
+}
+.btn--confirm:hover, .btn--confirm:focus {
+  color: #fff;
+}
+
+.btn--cancel {
+  background-color: #fff;
+  border-color: #ccc;
 }
 
 /* Charts */
@@ -3058,6 +3077,52 @@ ul.list-justify.large-number span {
 
 .padding-25 {
   padding: 25px !important;
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinner-border {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: text-bottom;
+  border: 0.15em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner-border 0.75s linear infinite;
+}
+
+.spinner-border-sm {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-width: 0.5px;
+}
+
+@keyframes spinner-grow {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.spinner-grow {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: text-bottom;
+  background-color: currentColor;
+  border-radius: 50%;
+  opacity: 0;
+  animation: spinner-grow 0.75s linear infinite;
+}
+
+.spinner-grow-sm {
+  width: 0.5rem;
+  height: 0.5rem;
 }
 
 /* Page Error */

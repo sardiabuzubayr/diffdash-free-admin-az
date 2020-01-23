@@ -21,7 +21,6 @@
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
-	<link rel="stylesheet" href="assets/plugin/jstree/dist/themes/default/style.min.css" />
 </head>
 
 <body>
@@ -255,97 +254,30 @@
 		<div id="main-content">
 			<div class="container-fluid">
 				<div class="section-heading">
-					<h1 class="page-title">Tree View</h1>
+					<h1 class="page-title">Block UI</h1>
 				</div>
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-12">
 						<div class="card card-primary">
-							<div class="card-title"><h3>HTML demo</h3></div>
-							<div class="card-body">
-								<div class="panel-content">
-									
-									<div id="html" class="demo">
-										<ul>
-											<li data-jstree='{ "opened" : true }'>Root node
-												<ul>
-													<li data-jstree='{ "selected" : true }'>Child node 1</li>
-													<li>Child node 2</li>
-												</ul>
-											</li>
-										</ul>
-									</div>
-								</div>
+							<div class="card-title"><h3>Basic</h3></div>
+							<div class="card-body" id="card-kt_blockui_1_1">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inceptos imperdiet magna! Sed fusce fames tempus litora venenatis ad: Ac aliquet leo hendrerit taciti viverra? Nisl suscipit potenti accumsan quis ipsum purus cursus. Suspendisse ultrices morbi in purus lectus dictum porta; Commodo penatibus nec.
+							</div>
+							<div class="card-footer">
+								<button type="button" class="btn btn-success" id="kt_blockui_1_1">Default</button>
+								<button type="button" class="btn btn-primary" id="kt_blockui_1_2">Overlay Color</button>
+								<button type="button" class="btn btn-info" id="kt_blockui_1_3">Custom Text</button>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6">
-						<div class="card card-success">
-							<div class="card-title"><h3>Populate</h3></div>
-							<div class="card-body">
-								<div class="panel-content">
-									
-									<div id="popup" class="demo">
-										<ul>
-											<li data-jstree='{ "opened" : true }'>Root node
-												<ul>
-													<li data-jstree='{ "selected" : true }'>Child node 1</li>
-													<li>Child node 2</li>
-												</ul>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="card card-warning">
-							<div class="card-title"><h3>Disabled Tree</h3></div>
-							<div class="card-body">
-								<div class="panel-content">									
-									<div id="disabled" class="demo">
-										<ul>
-											<li data-jstree='{"opened":true,"selected":true}'>Root
-											  <ul>
-											    <li data-jstree='{"disabled":true}'>Child 1</li>
-											    <li data-jstree='{"disabled":true}'>
-											      Child 2</li>
-											    <li>
-											      Child 3</li>
-											  </ul>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="card card-danger">
-							<div class="card-title"><h3>Custom Icon</h3></div>
-							<div class="card-body">
-								<div class="panel-content">									
-									<div id="custom-icon" class="demo">
-										<ul>
-											<li data-jstree='{"opened":true,"selected":true}'>Root
-											  <ul>
-											    <li data-jstree='{"icon":"fa fa-leaf"}'>Child 1</li>
-											    <li data-jstree='{"icon":"fa fa-leaf"}'>
-											      Child 2</li>
-											    <li data-jstree='{"icon":"fa fa-folder"}'>Child 3
-											    	<ul>
-											    		<li data-jstree='{"icon":"fa fa-leaf"}'>
-											    			Child 3.1
-											    		</li>
-											    	</ul>
-											    </li>
-											  </ul>
-											</li>
-										</ul>
-									</div>
-								</div>
+
+					<div class="col-md-12">
+						<div class="card card-primary">
+							<div class="card-title"><h3>Modal Blocking</h3></div>
+							<div class="card-footer">
+								<button type="button" data-toggle="modal" data-target=".bd-example-modal-xl" class="btn btn-success" id="kt_blockui_2_1">Default</button>
+								<button type="button" class="btn btn-primary" id="kt_blockui_2_2">Overlay Color</button>
+								<button type="button" class="btn btn-info" id="kt_blockui_2_3">Custom Text</button>
 							</div>
 						</div>
 					</div>
@@ -358,6 +290,35 @@
 			<p class="copyright">&copy; 2017 <a href="https://www.themeineed.com" target="_blank">Theme I Need</a>. All Rights Reserved.</p>
 		</footer>
 	</div>
+
+	<div class="modal fade" id="dialog-block" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+	        <div class="modal-content" style="">
+	            <div class="modal-header">
+	                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span aria-hidden="true">×</span>
+	                </button>
+	            </div>
+	            <div class="modal-body">
+	                <form>
+	                    <div class="form-group">
+	                        <label for="recipient-name" class="form-control-label">Recipient:</label>
+	                        <input type="text" class="form-control" id="recipient-name">
+	                    </div>
+	                    <div class="form-group">
+	                        <label for="message-text" class="form-control-label">Message:</label>
+	                        <textarea class="form-control" id="message-text"></textarea>
+	                    </div>
+	                </form>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	                <button type="button" class="btn btn-primary" id="kt_blockui_4_1">Block modal</button>
+	            </div>
+	        </div>
+	    </div>
+    </div>
 	<!-- END WRAPPER -->
 	<!-- Javascript -->
 	<script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -365,44 +326,46 @@
 	<script src="assets/vendor/metisMenu/metisMenu.js"></script>
 	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 	<script src="assets/scripts/common.js"></script>
-	<script src="assets/plugin/jstree/dist/jstree.min.js"></script>
+	<script src="assets/plugin/blockui/jquery.blockUI.js"></script>
 </body>
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('#html').jstree();
-		$('#disabled').jstree();
-		$('#custom-icon').jstree();
-		$('#popup').jstree({
-		  "core" : {
-		    "animation" : 0,
-		    "check_callback" : true,
-		    "themes" : { "stripes" : true },
-		  },
-		  "types" : {
-		    "#" : {
-		      "max_children" : 1,
-		      //"max_depth" : 4,
-		      "valid_children" : ["root"]
-		    },
-		    "root" : {
-		      "icon" : "/static/3.3.8/assets/images/tree_icon.png",
-		      "valid_children" : ["default"]
-		    },
-		    "default" : {
-		      "valid_children" : ["default","file"]
-		    },
-		    "file" : {
-		      "icon" : "glyphicon glyphicon-file",
-		      "valid_children" : []
-		    }
-		  },
-		  "plugins" : [
-		    "contextmenu", "dnd", "search",
-		    "state", "types", "wholerow"
-		  ]
-		});
+		$('#kt_blockui_1_1').click(function() { 
+            $('#card-kt_blockui_1_1').block({
+            	message:'<div class="spinner-border text-success" role="status"> <span class="sr-only">Loading...</span></div>',
+                css: { border: 'none', backgroundColor:'rgba(0,0,0,.0001)'} 
+             }), 
+            setTimeout(function(){
+            	$('#card-kt_blockui_1_1').unblock()},
+            2000)
+        });
 
-	})
+        $('#kt_blockui_1_2').click(function() { 
+            $('#card-kt_blockui_1_1').block({
+            	message:'<div class="spinner-border text-success" role="status"> <span class="sr-only">Loading...</span></div>',
+            	overlayCSS: { backgroundColor: '#f8f8f8' },
+                css: { border: 'none', backgroundColor:'rgba(0,0,0,.0001)'} 
+             }), 
+            setTimeout(function(){
+            	$('#card-kt_blockui_1_1').unblock()},
+            2000)
+        });
+
+         $('#kt_blockui_1_3').click(function() { 
+            $('#card-kt_blockui_1_1').block({
+            	message:'<h5 style="background-color:white; padding:8px 10px 8px 10px; border-radius:5px">Please wait... <div class="spinner-border text-success" role="status"> <span class="sr-only">Loading...</span></div></h5>',
+            	overlayCSS: { backgroundColor: '#e8e2e2' },
+                css: { border: 'none', backgroundColor:'rgba(0,0,0,.0001)', width:'auto'} 
+             }), 
+            setTimeout(function(){
+            	$('#card-kt_blockui_1_1').unblock()},
+            2000)
+        });
+
+        $('#kt_blockui_2_1').click(function(){
+        	$('.modal').modal('show');
+        })
+	});
 </script>
 </html>
