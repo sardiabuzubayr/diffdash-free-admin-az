@@ -156,6 +156,10 @@ html.fullscreen-bg #wrapper {
   color: #c1c1c1;
 }
 
+.footer {
+  float: right;
+}
+
 /* Navigation */
 .navbar-default {
   -webkit-border-radius: 0;
@@ -402,6 +406,7 @@ html.fullscreen-bg #wrapper {
 .user-account .user-photo {
   margin: 0 auto;
   border: 2px solid #e8e8e8;
+  width: 40%;
 }
 .user-account .user-name {
   display: block;
